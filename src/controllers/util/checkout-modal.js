@@ -1,7 +1,7 @@
 //Checkout modal's controller
 
 angular.module('upplify')
-.controller('CheckoutModal', function($scope, $uibModalInstance, SharedOrder, MESSAGEBOX) {
+.controller('CheckoutModal', function($scope, $uibModalInstance, SharedOrder, MESSAGEBOX, localStorageService) {
 	//Closes the modal.
 	$scope.cancel = function() {
 		$uibModalInstance.dismiss();
