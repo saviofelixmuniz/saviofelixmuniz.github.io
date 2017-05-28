@@ -10,7 +10,7 @@ angular.module('upplify')
 	//Displays a different modal showing the items purchased, thus confirming the order. 
 	$scope.submit = function() {
 		$uibModalInstance.close();
-		MESSAGEBOX.successBox('Pedido confirmado', 'Seu pedido foi: <br>' + getOrderString(), confirm);
+		MESSAGEBOX.successBox('Order confirmed', 'Your order was: <br>' + getOrderString(), confirm);
 	}
 
 	function confirm () {
