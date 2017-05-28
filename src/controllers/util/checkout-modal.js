@@ -16,6 +16,7 @@ angular.module('upplify')
 	function confirm () {
 		$scope.order = [];
 		SharedOrder.updateOrder($scope.order);
+		localStorageService.set('order', SharedOrder.getOrder());
 	}
 
 	//Computes the total value to be paid based on both quantity and different items.
@@ -39,6 +40,7 @@ angular.module('upplify')
 
 		SharedOrder.updateOrder($scope.order);
 		SharedOrder.runNavBarCallback();
+		localStorageService.set('order', SharedOrder.getOrder());
 	}
 
 	//Controls whether or not the confirmation button will be available (criteria: you must have at least one item in cart).

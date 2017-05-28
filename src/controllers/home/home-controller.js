@@ -6,7 +6,7 @@ angular.module('upplify')
 	$rootScope.currentType = 'all';
 	$scope.searchTerm = '';
 
-	//Loads the food data from the JSON file.
+	//Loads the food data from the JSON file and the former order data from local storage.
 	$scope.loadData = function() {
 		DataLoad.getAllFood().then(function(food) {
 			$scope.foods = food;
