@@ -1,7 +1,7 @@
 //Main page's controller
 
 angular.module('upplify')
-.controller('HomeCtrl', function ($rootScope, $scope, DataLoad, SharedOrder, FOODLAYOUTSETTINGS) {
+.controller('HomeCtrl', function ($rootScope, $scope, DataLoad, SharedOrder, FOODLAYOUTSETTINGS, localStorageService) {
 	$scope.cart = [];
 	$rootScope.currentType = 'all';
 	$scope.searchTerm = '';
@@ -11,6 +11,12 @@ angular.module('upplify')
 		DataLoad.getAllFood().then(function(food) {
 			$scope.foods = food;
 		});
+
+		var order = localStorageService.get('order');
+		if (order) {
+			SharedOrder.updateOrder(order);
+			SharedOrder.runNavBarCallback();	
+		}		
 	}
 
 	//Pushes an item to the cart and sets a new property called quantity, which will hold how many of that item the costumer will purchase.
@@ -18,6 +24,7 @@ angular.module('upplify')
 		item.quantity = 1;
 		SharedOrder.pushOrder(item);
 		SharedOrder.runNavBarCallback();
+		localStorageService.set('order', SharedOrder.getOrder());
 	}
 
 	//Filters food type based on the type chosen on nav bar. Here I could have chosen to use a service as well, 
