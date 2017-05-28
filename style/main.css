@@ -1,0 +1,52 @@
+#brand {
+	font-family: 'Pacifico', cursive;
+	font-size: 200%;
+	text-shadow: 2px 2px black;
+}
+
+#home {
+	padding-top: 150px;
+}
+
+#addItemButton {
+	cursor: pointer; 
+	min-width: 100px;
+}
+
+.active {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+    -moz-filter:    grayscale(0%);
+    -ms-filter:     grayscale(0%);
+    -o-filter:      grayscale(0%);
+}
+
+.not-active {
+    filter: none;
+    -webkit-filter: grayscale(100%);
+    -moz-filter:    grayscale(100%);
+    -ms-filter:     grayscale(100%);
+    -o-filter:      grayscale(100%);
+}
+.navbar-items{
+	cursor: pointer; 
+	text-align: center;
+	margin: 0 auto;
+	margin-left: 2vh;
+}
+
+.navbar-items img{
+	margin-top: 1vh;
+	height: 5vh;
+	max-height: 50px;
+	display: block;
+}
+
+.navbar-items p {
+ 	color: white;
+}
+
+.thumbnail {
+	height: 80px;
+	max-width: 120px; 
+}

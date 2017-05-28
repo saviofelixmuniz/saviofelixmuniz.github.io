@@ -1,0 +1,14 @@
+{
+  "name": "Upplify",
+  "homepage": "https://github.com/saviofelixmuniz/UpplifyTest",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

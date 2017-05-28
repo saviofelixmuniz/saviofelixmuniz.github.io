@@ -1,0 +1,1 @@
+angular.module('upplify', ['ui.bootstrap','ngRoute']);

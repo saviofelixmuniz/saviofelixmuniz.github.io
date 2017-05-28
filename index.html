@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Teste - Upplify</title>
+
+	<!-- STYLE IMPORT -->
+
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="/bower_components/flatly-theme/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Baloo+Bhaina|Modak|Pacifico|Shrikhand" rel="stylesheet">
+	<link rel="stylesheet" href="/style/main.css">
+	<link rel="stylesheet" href="/bower_components/bootbox.js/style.css">
+	<!-- LIB SCRIPTS IMPORT -->
+
+	<script src="bower_components/jquery/dist/jquery.js"></script>	
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/bootbox.js/bootbox.js"></script>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	
+
+	<script src="src/app.js"></script>
+
+	<!-- CONTROLLERS -->
+	<script src="src/controllers/home/home-controller.js"></script>
+	<script src="src/controllers/util/checkout-modal.js"></script>
+	
+	<!-- DIRECTIVES -->
+	<script src="src/directives/util/nav-bar.js"></script>
+
+	<!-- SERVICE -->
+	<script src="src/services/data-load-service.js"></script>
+	<script src="src/services/shared-order-service.js"></script>
+
+	<!-- CONSTANTS -->
+	<script src="src/constants/food-layout-settings.js"></script>
+	<script src="src/constants/message-box.js"></script>
+
+	<script src="src/router.js"></script>
+</head>
+<body ng-app="upplify">	
+	<nav-bar></nav-bar>
+	<div ng-view></div>
+
+	<div class="footer" style="margin-top: 30px; text-align: center;  font-size: small">
+		<p>&copy;2017 | Todos os direitos reservados | Upplify Food</p>
+	</div>	
+</body>
+</html>
